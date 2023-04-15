@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="//image.prntscr.com/image/93970e70e1f045e1aff76e05469008d8.png" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+body{
+  font-family: 'Muli', sans-serif;
+  background:#ddd;
+}
+.shell{
+  padding:80px 0;
+}
+.wsk-cp-product{
+  background:#fff;
+  padding:15px;
+  border-radius:6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position:relative;
+  margin:20px auto;
+}
+.wsk-cp-img{
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translate(-50%);
+  -webkit-transform:translate(-50%);
+  -ms-transform:translate(-50%);
+  -moz-transform:translate(-50%);
+  -o-transform:translate(-50%);
+  -khtml-transform:translate(-50%);
+  width: 100%;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-img img{
+  width:100%;
+  transition: all 0.2s ease-in-out;
+  border-radius:6px;
+}
+.wsk-cp-product:hover .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product:hover .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.wsk-cp-text{
+  padding-top:150%;
+}
+.wsk-cp-text .category{
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  padding:5px;
+  margin-bottom:45px;
+  position:relative;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-text .category > *{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -khtml-transform: translate(-50%,-50%);
+    
+}
+.wsk-cp-text .category > span{
+  padding: 12px 30px;
+  border: 1px solid #313131;
+  background:#212121;
+  color:#fff;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius:27px;
+  transition: all 0.05s ease-in-out;
+  
+}
+.wsk-cp-product:hover .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product:hover .wsk-cp-text .category{
+  margin-top: 0px;
+}
+.wsk-cp-text .title-product{
+  text-align:center;
+}
+.wsk-cp-text .title-product h3{
+  font-size:20px;
+  font-weight:bold;
+  margin:15px auto;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  width:100%;
+}
+.wsk-cp-text .description-prod p{
+  margin:0;
+}
+/* Truncate */
+.wsk-cp-text .description-prod {
+  text-align:center;
+  width: 100%;
+  height:62px;
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  margin-bottom:15px;
+}
+.card-footer{
+  padding: 25px 0 5px;
+  border-top: 1px solid #ddd;
+}
+.card-footer:after, .card-footer:before{
+  content:'';
+  display:table;
+}
+.card-footer:after{
+  clear:both;
+}
+
+.card-footer .wcf-left{
+  float:left;
+  
+}
+
+.card-footer .wcf-right{
+  float:right;
+}
+
+.price{
+  font-size:18px;
+  font-weight:bold;
+}
+
+a.buy-btn{
+  display:block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  width:35px;
+  height:35px;
+  line-height:35px;
+  border-radius:50%;
+  border:1px solid #212121;
+  transition: all 0.2s ease-in-out;
+}
+a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
+  border-color: #FF9800;
+  background: #FF9800;
+  color: #fff;
+  text-decoration:none;
+}
+.wsk-btn{
+  display:inline-block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  border-color: #FF9800;
+  background: #FF9800;
+  padding:12px 30px;
+  border-radius:27px;
+  margin: 0 5px;
+}
+.wsk-btn:hover, .wsk-btn:focus, .wsk-btn:active{
+  text-decoration:none;
+  color:#fff;
+}  
+.red{
+  color:#F44336;
+  font-size:22px;
+  display:inline-block;
+  margin: 0 5px;
+}
+@media screen and (max-width: 991px) {
+  .wsk-cp-product{
+    margin:40px auto;
+  }
+  .wsk-cp-product .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+  .wsk-cp-product .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product .wsk-cp-text .category{
+  margin-top: 0px;
+}
+a.buy-btn{
+  border-color: #FF9800;
+  background: #FF9800;
+  color: #fff;
+}
+}
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1>Product card</h1>
+        <span>Create With By: <strong>GROUP 1</strong> From: <i><a href="#" class="wsk-btn">Apple</a></i></span>
+    </div>
+
+
+    <div class="shell">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                            <img src="https://shop.vodacom.co.za/media/catalog/product/4/6/469425_1_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width="
+                                alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                            </div>
+                            <div class="title-product">
+                                <h3>iPHONE 11</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>The iPhone 11 is a 2019 smartphone by Apple, with a 6.1-inch Liquid Retina display, dual-camera system, A13 Bionic chip, Face ID, and water/dust resistance. It comes in six colors and runs on iOS 13 with features like Dark Mode and enhanced privacy settings.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₱ 33,095.00</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                            class="zmdi zmdi-shopping-basket"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone12-digitalmat-gallery-1-202111?wid=364&hei=333&fmt=png-alpha&.v=1635980933000"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                            </div>
+                            <div class="title-product">
+                                <h3>iPHONE 12</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>The iPhone 12 is a high-end smartphone developed by Apple. It features a 6.1-inch Super Retina XDR display, A14 Bionic chip, 5G connectivity, dual 12MP cameras, and MagSafe wireless charging. In short, the iPhone 12 is a powerful and advanced mobile device with advanced features and capabilities.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₱42,990</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                            class="zmdi zmdi-shopping-basket"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone13-digitalmat-gallery-1-202203?wid=364&hei=333&fmt=png-alpha&.v=1677662648568"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                            </div>
+                            <div class="title-product">
+                                <h3>iPHONE 13</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>The iPhone 13 is a new smartphone model released by Apple. It comes in four versions: the iPhone 13, iPhone 13 Mini, iPhone 13 Pro, and iPhone 13 Pro Max. The device features a more powerful A15 Bionic chip, improved cameras, longer battery life, and a brighter and smoother display. Additionally, it has new software features such as cinematic mode and improved night mode.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₱49,990</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                            class="zmdi zmdi-shopping-basket"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone14pro-digitalmat-gallery-2-202209?wid=364&hei=333&fmt=png-alpha&.v=1660830896841"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                            </div>
+                            <div class="title-product">
+                                <h3>iPHONE 14</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>The iPhone 14 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₱70,990</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                            class="zmdi zmdi-shopping-basket"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+</body>
+
+</html>
